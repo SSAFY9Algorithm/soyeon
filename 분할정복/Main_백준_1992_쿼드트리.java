@@ -33,10 +33,17 @@ public class Main_백준_1992_쿼드트리 {
 		}else {
 			sb.append("(");
 			int N2 = N/2;
+<<<<<<< HEAD
 			QuadTree(N2, x, y); 		// (0, 0)
 			QuadTree(N2, x, y + N2); 	// (0, 1)
 			QuadTree(N2, x + N2, y); 		// (1, 0)
 			QuadTree(N2, x + N2, y + N2); 	// (1, 1)
+=======
+			QuadTree(N2, x, 		y); 		// (0, 0)
+			QuadTree(N2, x, 		y + N2); 	// (0, 1)
+			QuadTree(N2, x + N2, 	y); 		// (1, 0)
+			QuadTree(N2, x + N2,	y + N2); 	// (1, 1)
+>>>>>>> 284d4774554f0459225244fbcaa9364bb33bb571
 			sb.append(")");
 		}
 		
