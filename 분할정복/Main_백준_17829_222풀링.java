@@ -21,13 +21,9 @@ public class Main_백준_17829_222풀링 {
 			}
 		}
 		System.out.println(Pooling(N, 0, 0));
-<<<<<<< HEAD
 	} // end of main
-	
-=======
-		
-	} // end of main
->>>>>>> 284d4774554f0459225244fbcaa9364bb33bb571
+
+
 	public static int Pooling(int N, int x, int y) {
 		if(N == 2) {
 			return FindSecond(N, x, y);
@@ -41,12 +37,9 @@ public class Main_백준_17829_222풀링 {
 			Arrays.sort(arr);
 			return arr[2]; // 두 번째로 큰 수
 		}
-<<<<<<< HEAD
+
 	} // end of Pooling
-	
-=======
-	}
->>>>>>> 284d4774554f0459225244fbcaa9364bb33bb571
+
 	public static int FindSecond(int N, int x, int y) {
 		int[] arr = new int[4];	
 		int idx = 0;
@@ -57,10 +50,5 @@ public class Main_백준_17829_222풀링 {
 		}
 		Arrays.sort(arr);
 		return arr[2]; // 두 번째로 큰 수
-<<<<<<< HEAD
 	} // end of FindSecond
 } // end of class
-=======
-	}
-}
->>>>>>> 284d4774554f0459225244fbcaa9364bb33bb571
