@@ -1,12 +1,11 @@
 package 이분탐색;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Main_백준_2110_공유기설치_골드4_함소연 {
+public class Main_백준_2110_공유기설치_골드4_함소연_284ms{
 	private static int[] arr;
 	private static int N;
 	private static int C;
@@ -24,13 +23,13 @@ public class Main_백준_2110_공유기설치_골드4_함소연 {
 		}
 		
 		Arrays.sort(arr);
-//		System.out.println(Arrays.toString(arr));
 		BinarySearch();
 	}
 
 	private static void BinarySearch() {
 		int start = 0;
-		int end = N;
+		int end = arr[N-1];
+		
 		int cnt = 0;
 		int ans = 0;
 		while(start <= end) {
@@ -46,7 +45,6 @@ public class Main_백준_2110_공유기설치_골드4_함소연 {
 					prev = now;
 				}
 			}
-//			System.out.println(start + " " + mid+" "+end);
 			
 			// 공유기 개수보다 작으면
 			if(cnt < C) {
