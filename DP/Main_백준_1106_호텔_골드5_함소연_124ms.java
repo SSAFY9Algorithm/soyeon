@@ -3,6 +3,7 @@ package DP;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 /** knapsack */
@@ -32,6 +33,7 @@ public class Main_백준_1106_호텔_골드5_함소연_124ms {
 			}
 		}
 		
+		System.out.println(Arrays.toString(dp));
 		for (int i = 1; i <= 100001; i++) {
 			if(dp[i] >= C) { // 적어도 C명 이상 고객 유치
 				System.out.println(i);
