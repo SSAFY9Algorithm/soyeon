@@ -15,16 +15,6 @@ public class Solution_프로그래머스_자물쇠와열쇠_레벨3 {
 	public static boolean solution(int[][] key, int[][] lock) {
 		M = key.length;
 		N = lock.length;
-		boolean flag=  false;
-		for (int i = 0; i < lock.length; i++) {
-			for (int j = 0; j < lock.length; j++) {
-				if(lock[i][j] != 0) {
-					flag = true;
-					break;
-				}
-			}
-		}
-		if(!flag) return true;
 		int[][] map = new int[N+M*2-2][N+M*2-2];
 		for (int i = 0; i < map.length-M+1; i++) {
 			for (int j = 0; j < map.length-M+1; j++) {
@@ -39,8 +29,6 @@ public class Solution_프로그래머스_자물쇠와열쇠_레벨3 {
 					}
 					map = new int[N+M*2-2][N+M*2-2];
 					map = change(map, temp1, i, j);
-					print(temp1);
-					print(map);
 					if(check(map, lock))
 						return true;
 					for (int d = 0; d < M; d++) {
@@ -62,22 +50,12 @@ public class Solution_프로그래머스_자물쇠와열쇠_레벨3 {
 	}
 
 	private static boolean check(int[][] map, int[][] lock) {
-		for (int i = N-1, r = 0; r < N; i++, r++) {
-			for (int j = N-1, c = 0; j < N; j++, c++) {
+		for (int i = M-1, r = 0; i < N+M-1; i++, r++) {
+			for (int j = M-1, c = 0; j < N+M-1; j++, c++) {
 				if(lock[r][c] == 1 && map[i][j] == 1) return false;
 				if(lock[r][c] == 0 && map[i][j] == 0) return false;
 			}
 		}
 		return true;
 	}
-	private static void print(int[][] arr) {
-		for (int i = 0; i < arr.length; i++) {
-			for (int j = 0; j < arr.length; j++) {
-				System.out.print(arr[i][j] + " ");
-			}
-			System.out.println();
-		}
-		System.out.println();
-	}
-	
 }
