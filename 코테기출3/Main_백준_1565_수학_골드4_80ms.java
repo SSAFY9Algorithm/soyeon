@@ -23,7 +23,7 @@ public class Main_백준_1565_수학_골드4_80ms {
 		for (int i = 0; i < arrM.length; i++) {
 			num2 = gcd(num2, arrM[i]);
 		}
-		// 약수 구하기
+		// 약수 개수 구하기
 		int i = 0;
 		for (i = 1; i*i < num2 ; i++) {
 			if(num2%i == 0) {
